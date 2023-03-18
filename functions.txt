@@ -78,4 +78,5 @@ COUNT    | LINE
        74 | get_self(): Returns the name of the current contract.
        75 | require_auth(): Ensures that the current action has been authorized by the account that is calling the contract.
        76 | send_inline(): Executes another action within the same transaction.
+       77 | eosio::asset() is an EOSIO type that represents an amount of an asset, such as a currency or token. An eosio::asset object contains two members: a uint64_t representing the amount of the asset, and an eosio::symbol object representing the symbol of the asset.
 -----------------------------------------------------
