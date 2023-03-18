@@ -1,0 +1,81 @@
+commonly used functions in EOSIO:
+COUNT    | LINE
+-----------------------------------------------------
+       1 | eosio::require_recipient: Notifies an account of an action that has been taken on the blockchain.
+       2 | eosio::current_time_point: Returns the current time as a time_point.
+       3 | eosio::send_context_free_inline: Sends a context-free inline action to another contract.
+       4 | eosio::send_inline: Sends an inline action to another contract.
+       5 | eosio::cancel_deferred: Cancels a deferred transaction that was previously scheduled.
+       6 | eosio::current_block_time: Returns the time at which the current block was produced.
+       7 | eosio::eosio_assert_code_message: Similar to eosio::eosio_assert_code(), but allows you to include a custom message in the exception.
+       8 | eosio::get_sender: Returns the account name of the account that sent the current action.
+       9 | eosio::is_feature_activated: Checks whether a specified protocol feature has been activated on the blockchain.
+       9 | eosio::require_auth2: Ensures that the current action has been authorized by a specified account and permission.
+       10 | eosio::transaction: Provides access to information about the current transaction, such as the ID and the sender's account name.
+       11 | eosio::action_permission: Sets the permission required to execute a particular action.
+       12 | eosio::action_wrapper: A helper class that simplifies the creation of actions by allowing you to define a function that represents an action.
+       13 | eosio::action: Executes an action on the blockchain.
+       14 | eosio::assert: Checks that a condition is true, and throws an exception if it is not.
+       15 | eosio::asset: Represents a token asset, including the amount of tokens and the token symbol.
+       16 | eosio::check_transaction_authorization: Checks whether the current transaction is authorized by the account that is calling the contract.
+       17 | eosio::check: Checks that a condition is true, and throws an exception if it is not (similar to eosio::assert(), but with a more informative error message).
+       18 | eosio::check: Ensures that a condition is true. If the condition is not true, an exception is thrown and the transaction is rolled back.
+       19 | eosio::checksum256: Represents a 256-bit checksum value.
+       20 | eosio::datastream: A helper class that allows you to serialize and deserialize data.
+       21 | eosio::db_end_i64: Returns an iterator to the end of a range of objects in the contract's database that match a specified secondary index.
+       22 | eosio::db_find_i64: Finds a row in a table using the specified primary key.
+       23 | eosio::db_find_i64: Searches for an object in the contract's database using a secondary index.
+       24 | eosio::db_get: Retrieves an object from the contract's database.
+       25 | eosio::db_lowerbound_i64: Finds the first row in a table that has a primary key that is greater than or equal to the specified value.
+       26 | eosio::db_lowerbound_i64: Returns the first object in the contract's database that matches a specified secondary index.
+       27 | eosio::db_next_i64: Finds the next row in a table after the specified row.
+       28 | eosio::db_previous_i64: Finds the previous row in a table before the specified row.
+       29 | eosio::db_remove: Removes an object from the contract's database.
+       30 | eosio::db_remove: Removes data from a table.
+       31 | eosio::db_store: Stores an object in the contract's database.
+       32 | eosio::db_store: Stores data in a table.
+       33 | eosio::db_update: Updates an object in the contract's database.
+       34 | eosio::db_update: Updates data in a table.
+       35 | eosio::db_upperbound_i64: Finds the last row in a table that has a primary key that is less than or equal to the specified value.
+       36 | eosio::db_upperbound_i64: Returns the last object in the contract's database that matches a specified secondary index.
+       37 | eosio::emplace: Inserts a new row into a table.
+       38 | eosio::eosio_assert_code: Similar to eosio::eosio_assert(), but allows you to specify the error code that should be returned with the exception.
+       39 | eosio::eosio_assert_message: Similar to eosio::eosio_assert(), but allows you to include a custom message in the exception.
+       40 | eosio::eosio_assert_message: Similar to eosio::eosio_assert(), but includes a custom message in the exception.
+       41 | eosio::eosio_assert: Similar to eosio::assert(), but includes additional information in the exception message.
+       42 | eosio::eosio_check: Similar to eosio::check(), but includes additional information in the exception message.
+       43 | eosio::eosio_exit: Causes the current transaction to exit immediately.
+       44 | eosio::eosio_throw: Throws an exception with a specified message.
+       45 | eosio::erase: Removes a row from a table.
+       46 | eosio::extended_asset: Represents a token asset along with the contract that issues the token.
+       47 | eosio::extended_symbol: Represents a token symbol along with the contract that issues the token.
+       48 | eosio::get_first_receiver: Returns the name of the account that is the first receiver of the current action.
+       49 | eosio::get_self_address: Returns the address of the current contract.
+       50 | eosio::is_account: Determines whether an account exists on the blockchain.
+       51 | eosio::modify: Modifies an existing row in a table.
+       52 | eosio::multi_index: A template class that simplifies the creation and management of tables.
+       53 | eosio::name: Represents an EOSIO name, which is a unique identifier used to represent accounts, actions, and other entities on the EOSIO blockchain.
+       54 | eosio::now: Returns the current time as a number of microseconds since the Unix epoch (January 1, 1970).
+       55 | eosio::pack_action_data: Serializes data to be passed to an action.
+       56 | eosio::pack: Serializes data.
+       57 | eosio::print: Prints a message to the console.
+       58 | eosio::print: Writes a message to the contract's standard output (visible in the contract's logs).
+       59 | eosio::require_auth_multiple: Ensures that the current action has been authorized by a specified set of accounts and permissions.
+       60 | eosio::require_auth_one: Ensures that the current action has been authorized by at least one of a specified set of accounts and permissions.
+       61 | eosio::require_auth_or_throw: Similar to eosio::require_auth(), but throws an exception if the current action has not been authorized.
+       62 | eosio::require_auth: Ensures that the current action has been authorized by a specified account and permission.
+       63 | eosio::require_auth: Ensures that the current action has been authorized by the account that is calling the contract.
+       64 | eosio::require_no_throw: Ensures that a specified function does not throw any exceptions.
+       65 | eosio::ripemd160: Calculates the RIPEMD-160 hash of a given input.
+       66 | eosio::sha1: Calculates the SHA-1 hash of a given input.
+       67 | eosio::sha256: Calculates the SHA-256 hash of a given input.
+       68 | eosio::singleton: A template class that simplifies the creation and management of single-row tables.
+       69 | eosio::symbol: Represents a token symbol, including the symbol's name, precision, and symbol code.
+       70 | eosio::time_point_sec: Represents a point in time as the number of seconds since the Unix epoch.
+       71 | eosio::transaction: Allows you to execute multiple actions within a single transaction.
+       72 | eosio::unpack_action_data: Deserializes the data passed to an action.
+       73 | eosio::unpack: Deserializes data that was serialized using the eosio::pack() function.
+       74 | get_self(): Returns the name of the current contract.
+       75 | require_auth(): Ensures that the current action has been authorized by the account that is calling the contract.
+       76 | send_inline(): Executes another action within the same transaction.
+-----------------------------------------------------
